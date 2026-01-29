@@ -56,6 +56,13 @@ projectDB/
 ├── includes/
 │   ├── dbh.inc.php
 │   ├── config_session.inc.php
+|   |-- login.inc.php
+|   |-- set_role.inc.php
+|   |-- signup.inc.php
+|   |-- sinup_contr.inc.php
+|   |-- sinup_model.inc.php
+|   |-- signup_view.inc.php
+
 │
 ├── css/
 ├── js/
