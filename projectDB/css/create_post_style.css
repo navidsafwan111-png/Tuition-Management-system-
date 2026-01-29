@@ -1,0 +1,139 @@
+/* Specialized CSS for Create Post Page */
+
+:root {
+    --primary-color: #00b894;
+    --primary-hover: #009475;
+    --bg-color: #f0f2f5;
+    --text-dark: #2d3436;
+    --text-gray: #636e72;
+    --white: #ffffff;
+    --shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-dark);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.form-wrapper {
+    width: 100%;
+    max-width: 550px;
+}
+
+.create-post-container {
+    background: var(--white);
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: var(--shadow);
+}
+
+.create-post-title {
+    font-size: 1.8rem;
+    margin-bottom: 8px;
+    color: var(--text-dark);
+}
+
+.course-subtitle {
+    color: var(--text-gray);
+    margin-bottom: 30px;
+    font-size: 1rem;
+}
+
+/* Error Box */
+.error-box {
+    background-color: #ffeaa7;
+    color: #d63031;
+    padding: 12px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    border-left: 5px solid #d63031;
+}
+
+/* Form Groups */
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: var(--text-dark);
+}
+
+/* Input Elements */
+.post-textarea {
+    width: 100%;
+    min-height: 150px;
+    padding: 15px;
+    border: 2px solid #e1e8ed;
+    border-radius: 10px;
+    font-size: 1rem;
+    font-family: inherit;
+    resize: vertical;
+    transition: border-color 0.3s ease;
+}
+
+.post-textarea:focus {
+    outline: none;
+    border-color: var(--primary-color);
+}
+
+.post-select {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid #e1e8ed;
+    border-radius: 10px;
+    background-color: #fafafa;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+/* Buttons */
+.submit-btn {
+    width: 100%;
+    padding: 15px;
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 1.1rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.submit-btn:hover {
+    background-color: var(--primary-hover);
+    transform: translateY(-2px);
+}
+
+.submit-btn:active {
+    transform: translateY(0);
+}
+
+.cancel-link {
+    display: block;
+    text-align: center;
+    margin-top: 20px;
+    color: var(--text-gray);
+    text-decoration: none;
+    font-size: 0.9rem;
+}
+
+.cancel-link:hover {
+    text-decoration: underline;
+    color: var(--text-dark);
+}

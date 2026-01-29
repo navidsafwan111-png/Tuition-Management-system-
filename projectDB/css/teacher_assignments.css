@@ -1,0 +1,235 @@
+/* Reset small defaults */
+* {
+    box-sizing: border-box;
+    font-family: "Segoe UI", Tahoma, sans-serif;
+}
+
+body {
+    background: #f4f6f9;
+    margin: 0;
+    padding: 20px;
+}
+
+/* Main container */
+.assignment-container {
+    max-width: 1000px;
+    margin: auto;
+    background: #ffffff;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+}
+
+/* Header */
+.assignment-container header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 25px;
+}
+
+.assignment-container header h2 {
+    margin: 0;
+    color: #1f2937;
+}
+
+.assignment-container header a {
+    text-decoration: none;
+    color: #2563eb;
+    font-weight: 500;
+}
+
+.assignment-container header a:hover {
+    text-decoration: underline;
+}
+
+/* Create Assignment Section */
+.create-assignment {
+    background: #f9fafb;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 30px;
+}
+
+.create-assignment h3 {
+    margin-top: 0;
+    color: #111827;
+}
+
+.create-assignment form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.create-assignment input[type="text"],
+.create-assignment textarea,
+.create-assignment input[type="datetime-local"] {
+    padding: 10px;
+    border-radius: 6px;
+    border: 1px solid #d1d5db;
+    font-size: 14px;
+}
+
+.create-assignment textarea {
+    resize: vertical;
+    min-height: 80px;
+}
+
+.create
+-assignment button {
+    align-self: flex-start;
+    padding: 10px 20px;
+    background: #3b82f6;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background 0.2s;
+}
+
+.assignment-actions {
+    margin-top: 16px; /* Increased spacing for better "breathability" */
+    display: flex;
+    gap: 12px;
+    align-items: center;
+}
+
+.assignment-actions a {
+    text-decoration: none;
+    padding: 8px 16px; /* Slightly taller and wider for a modern feel */
+    border-radius: 8px; /* Softer rounded corners */
+    font-size: 14px;
+    font-weight: 600; /* Semi-bold for better readability */
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1); /* Smooth springy animation */
+    cursor: pointer;
+    border: 1px solid transparent;
+}
+
+/* Hover effect for all buttons: Slight lift and shadow */
+.assignment-actions a:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Active effect: Slight push down when clicked */
+.assignment-actions a:active {
+    transform: translateY(0);
+}
+
+.edit-btn {
+    background: #fef9c3; /* Lighter background */
+    color: #854d0e; /* Darker text for better contrast/modern look */
+    border: 1px solid #fde047;
+}
+
+.edit-btn:hover {
+    background: #facc15;
+    color: #1f2937;
+}
+
+.delete-btn {
+    background: #fee2e2; /* Soft red tint */
+    color: #991b1b; /* Deep red text */
+}
+
+.delete-btn:hover {
+    background: #ef4444;
+    color: white;
+}
+
+/* Container & Header */
+.assignment-container {
+    max-width: 600px;
+    margin: 40px auto;
+    background: #ffffff;
+    padding: 32px;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05); /* Soft, modern shadow */
+    border: 1px solid #f1f5f9;
+}
+
+.assignment-container header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 24px;
+}
+
+.assignment-container header h2 {
+    margin: 0;
+    color: #0f172a;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.assignment-container header a {
+    text-decoration: none;
+    color: #64748b;
+    font-size: 14px;
+    transition: color 0.2s;
+}
+
+.assignment-container header a:hover {
+    color: #2563eb;
+}
+
+/* Form Styling */
+.create-assignment {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.create-assignment input, 
+.create-assignment textarea {
+    width: 100%;
+    padding: 12px 16px;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    font-size: 15px;
+    font-family: inherit;
+    background: #f8fafc;
+    transition: all 0.2s ease;
+    box-sizing: border-box; /* Ensures padding doesn't affect width */
+}
+
+/* Focused State: This adds that "modern glow" when typing */
+.create-assignment input:focus, 
+.create-assignment textarea:focus {
+    outline: none;
+    border-color: #2563eb;
+    background: #ffffff;
+    box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.1);
+}
+
+.create-assignment textarea {
+    min-height: 120px;
+    resize: vertical; /* Allows user to grow the box but not break the width */
+}
+
+/* The Submit Button */
+.create-assignment button {
+    background: #2563eb;
+    color: white;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s, transform 0.1s;
+    margin-top: 8px;
+}
+
+.create-assignment button:hover {
+    background: #1d4ed8;
+}
+
+.create-assignment button:active {
+    transform: scale(0.98); /* Slight click feedback */
+}

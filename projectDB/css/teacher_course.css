@@ -1,0 +1,140 @@
+:root {
+    --primary-color: #4834d4;
+    --hover-color: #686de0;
+    --accent-color: #ebf0ff;
+    --bg-color: #f8fafd;
+    --text-main: #2d3436;
+    --text-muted: #636e72;
+    --white: #ffffff;
+    --shadow: 0 10px 30px rgba(72, 52, 212, 0.08);
+}
+
+body {
+    background-color: var(--bg-color);
+    font-family: 'Inter', -apple-system, sans-serif;
+    margin: 0;
+    padding: 60px 20px;
+    color: var(--text-main);
+}
+
+.course-management-container {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+/* Enhanced Header */
+.course-header {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.header-top {
+    margin-bottom: 15px;
+}
+
+.back-link {
+    text-decoration: none;
+    color: var(--primary-color);
+    font-weight: 600;
+    font-size: 0.95rem;
+    padding: 8px 16px;
+    background: var(--white);
+    border-radius: 50px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.03);
+    transition: all 0.2s ease;
+}
+
+.back-link:hover {
+    background: var(--primary-color);
+    color: var(--white);
+}
+
+h1 {
+    font-size: 2.8rem;
+    font-weight: 800;
+    margin: 15px 0 5px 0;
+    letter-spacing: -1px;
+}
+
+.course-code {
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 0.8rem;
+    font-weight: 700;
+}
+
+/* Management Grid */
+.management-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(310px, 1fr));
+    gap: 30px;
+}
+
+/* Redesigned Card Styling */
+.nav-card {
+    background: var(--white);
+    text-decoration: none;
+    padding: 35px 25px;
+    border-radius: 24px;
+    display: flex;
+    flex-direction: column; /* Stack vertically for a cleaner mobile look */
+    align-items: center;
+    text-align: center;
+    gap: 15px;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    box-shadow: var(--shadow);
+    border: 1px solid rgba(0, 0, 0, 0.02);
+}
+
+.nav-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(72, 52, 212, 0.15);
+    border-color: var(--primary-color);
+}
+
+.icon {
+    font-size: 2.2rem;
+    background: var(--accent-color);
+    width: 80px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 20px;
+    margin-bottom: 10px;
+}
+
+.nav-text h3 {
+    margin: 0;
+    color: var(--text-main);
+    font-size: 1.3rem;
+    font-weight: 700;
+}
+
+.nav-text p {
+    margin: 8px 0 0 0;
+    color: var(--text-muted);
+    font-size: 0.95rem;
+    line-height: 1.4;
+}
+
+/* Desktop horizontal layout for cards */
+@media (min-width: 768px) {
+    .nav-card {
+        flex-direction: row;
+        text-align: left;
+        padding: 30px;
+    }
+    
+    .icon {
+        margin-bottom: 0;
+        flex-shrink: 0;
+    }
+}
+
+/* Mobile Adjustments */
+@media (max-width: 600px) {
+    body { padding: 30px 15px; }
+    h1 { font-size: 2rem; }
+}

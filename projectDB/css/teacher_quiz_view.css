@@ -1,0 +1,142 @@
+/* Modern Styling for Quiz View Page */
+:root {
+    --primary-color: #4f46e5;
+    --primary-hover: #4338ca;
+    --bg-color: #f3f4f6;
+    --text-main: #111827;
+    --text-muted: #6b7280;
+    --white: #ffffff;
+    --border: #e5e7eb;
+    
+    /* Status Colors */
+    --color-upcoming: #f59e0b; /* Orange */
+    --color-running: #10b981;  /* Green */
+    --color-ended: #ef4444;    /* Red */
+}
+
+body {
+    background-color: var(--bg-color);
+    font-family: 'Inter', -apple-system, sans-serif;
+    margin: 0;
+    padding: 40px 20px;
+    color: var(--text-main);
+}
+
+.view-container {
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+/* Header & Navigation */
+.nav-header {
+    margin-bottom: 25px;
+}
+
+.back-link {
+    text-decoration: none;
+    color: var(--primary-color);
+    font-weight: 600;
+    font-size: 0.9rem;
+    transition: color 0.2s;
+}
+
+.back-link:hover {
+    color: var(--primary-hover);
+}
+
+/* Main Card */
+.quiz-card {
+    background: var(--white);
+    border-radius: 12px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    border: 1px solid var(--border);
+    overflow: hidden;
+}
+
+.card-header {
+    padding: 30px;
+    border-bottom: 1px solid var(--border);
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.card-header h2 {
+    margin: 0;
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+/* Status Badge */
+.status-badge {
+    padding: 6px 14px;
+    border-radius: 9999px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.status-Upcoming { background: #fef3c7; color: var(--color-upcoming); }
+.status-Running { background: #d1fae5; color: var(--color-running); }
+.status-Ended { background: #fee2e2; color: var(--color-ended); }
+
+/* Card Body Content */
+.card-content {
+    padding: 30px;
+}
+
+.detail-row {
+    display: flex;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #f9fafb;
+    padding-bottom: 15px;
+}
+
+.detail-row:last-child {
+    border-bottom: none;
+}
+
+.detail-label {
+    width: 140px;
+    font-weight: 600;
+    color: var(--text-muted);
+    font-size: 0.9rem;
+}
+
+.detail-value {
+    flex: 1;
+    font-weight: 500;
+}
+
+/* PDF Section */
+.pdf-section {
+    background: #f9fafb;
+    margin: 0 30px 30px 30px;
+    padding: 20px;
+    border-radius: 8px;
+    border: 1px solid var(--border);
+    text-align: center;
+}
+
+.pdf-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+    color: var(--white);
+    background: var(--primary-color);
+    padding: 10px 20px;
+    border-radius: 6px;
+    font-weight: 600;
+    transition: background 0.2s;
+}
+
+.pdf-link:hover {
+    background: var(--primary-hover);
+}
+
+.no-pdf {
+    color: var(--text-muted);
+    font-style: italic;
+}

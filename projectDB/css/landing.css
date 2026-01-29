@@ -1,0 +1,153 @@
+/* Global Layout */
+body {
+  margin: 0;
+  font-family: "Inter", Arial, Helvetica, sans-serif;
+  color: #0f172a;
+  background: linear-gradient(135deg, #0f172a, #1e3a8a);
+  min-height: 100vh;
+}
+
+/* Hero Section */
+.hero {
+  position: relative;
+  display: grid;
+  grid-template-rows: auto 1fr;
+  padding: 24px 40px 60px;
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+/* Navigation */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-weight: 800;
+  font-size: 24px;
+  letter-spacing: 0.5px;
+  color: #fbfcfd;
+}
+
+.nav-actions {
+  display: flex;
+  gap: 14px;
+}
+
+/* Buttons */
+a {
+  text-decoration: none;
+}
+
+.btn-primary,
+.btn-outline {
+  padding: 10px 18px;
+  border-radius: 12px;
+  font-weight: 600;
+  border: 1.5px solid #e5e7eb;
+  transition: 0.25s ease;
+}
+
+.btn-primary {
+  background: #fbbf24;
+  color: #0f172a;
+  border-color: #fbbf24;
+}
+
+.btn-primary:hover {
+  filter: brightness(1.1);
+  transform: translateY(-1px);
+}
+
+.btn-outline {
+  color: #f9fafb;
+  background: transparent;
+}
+
+.btn-outline:hover {
+  background: rgba(255, 255, 255, 0.1);
+  transform: translateY(-1px);
+}
+
+.large {
+  padding: 12px 24px;
+  font-size: 15px;
+}
+
+/* Content Section */
+.content {
+  max-width: 680px;
+  margin-top: 90px;
+  color: #f9fafb;
+}
+
+.content h1 {
+  font-size: 48px;
+  margin-bottom: 14px;
+}
+
+.content p {
+  font-size: 16px;
+  opacity: 0.9;
+  margin-bottom: 28px;
+  line-height: 1.6;
+}
+
+.cta {
+  display: flex;
+  gap: 14px;
+}
+
+/* Decorative Shapes */
+.decor {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(80px);
+  opacity: 0.7;
+}
+
+.decor-1 {
+  width: 260px;
+  height: 260px;
+  background: #38bdf8;
+  top: 10%;
+  right: 8%;
+}
+
+.decor-2 {
+  width: 340px;
+  height: 340px;
+  background: #f472b6;
+  bottom: -40px;
+  left: 4%;
+}
+
+.decor-3 {
+  width: 200px;
+  height: 200px;
+  background: #fbbf24;
+  bottom: 20%;
+  right: 18%;
+}
+
+/* Responsive */
+@media (max-width: 720px) {
+  .hero {
+    padding: 20px 22px 60px;
+  }
+
+  .content h1 {
+    font-size: 34px;
+  }
+
+  .cta {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .cta a {
+    text-align: center;
+  }
+}

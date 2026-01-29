@@ -1,0 +1,142 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+:root {
+    --primary-indigo: #4834d4;
+    --hover-indigo: #3c2bb3;
+    --bg-slate: #f1f5f9;
+    --text-main: #1e293b;
+    --text-muted: #64748b;
+    --white: #ffffff;
+    --border: #e2e8f0;
+}
+
+body {
+    background-color: var(--bg-slate);
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    padding: 40px 20px;
+}
+
+.grade-entry-wrapper {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.grade-entry-card {
+    background: var(--white);
+    padding: 40px;
+    border-radius: 16px;
+    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
+    border: 1px solid var(--border);
+}
+
+/* Header */
+.entry-header {
+    margin-bottom: 30px;
+    border-bottom: 2px solid var(--bg-slate);
+    padding-bottom: 20px;
+}
+
+.back-link {
+    text-decoration: none;
+    color: var(--primary-indigo);
+    font-size: 0.85rem;
+    font-weight: 600;
+    margin-bottom: 10px;
+    display: inline-block;
+}
+
+.entry-header h2 {
+    margin: 0;
+    font-size: 1.75rem;
+    color: var(--text-main);
+}
+
+.course-label {
+    margin-top: 5px;
+    color: var(--text-muted);
+    font-weight: 500;
+}
+
+/* Table Design */
+.table-responsive {
+    overflow-x: auto;
+}
+
+.grade-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.grade-table th {
+    text-align: left;
+    background: #f8fafc;
+    padding: 15px;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--text-muted);
+    border-bottom: 2px solid var(--border);
+}
+
+.grade-table td {
+    padding: 15px;
+    border-bottom: 1px solid var(--border);
+}
+
+.grade-table tr:hover {
+    background-color: #fcfdfe;
+}
+
+.student-name {
+    color: var(--text-main);
+    font-size: 1rem;
+}
+
+/* Input Fields */
+input[type="number"] {
+    width: 100%;
+    max-width: 120px;
+    padding: 10px 12px;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    font-size: 1rem;
+    font-family: inherit;
+    transition: all 0.2s ease;
+}
+
+input[type="number"]:focus {
+    outline: none;
+    border-color: var(--primary-indigo);
+    box-shadow: 0 0 0 3px rgba(72, 52, 212, 0.1);
+}
+
+/* Submit Button */
+.form-actions {
+    margin-top: 30px;
+    text-align: right;
+}
+
+.btn-save {
+    background: var(--primary-indigo);
+    color: white;
+    padding: 14px 30px;
+    border: none;
+    border-radius: 10px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.btn-save:hover {
+    background: var(--hover-indigo);
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(72, 52, 212, 0.2);
+}
+
+@media (max-width: 600px) {
+    .grade-entry-card { padding: 20px; }
+    input[type="number"] { max-width: 100%; }
+}

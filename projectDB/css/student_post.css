@@ -1,0 +1,102 @@
+/* Page Layout */
+body {
+    background-color: #f8fafc; /* Very light cool gray */
+    font-family: 'Inter', -apple-system, sans-serif;
+    color: #334155;
+    line-height: 1.6;
+    margin: 0;
+    padding: 40px 20px;
+}
+
+/* Page Header & Back Link */
+h2 {
+    max-width: 800px;
+    margin: 0 auto 10px auto;
+    color: #0f172a;
+    font-size: 24px;
+}
+
+a[href*="student_course.php"] {
+    display: inline-block;
+    max-width: 800px;
+    margin: 0 auto 30px auto;
+    text-decoration: none;
+    color: #64748b;
+    font-weight: 500;
+    transition: color 0.2s;
+}
+
+a[href*="student_course.php"]:hover {
+    color: #2563eb;
+}
+
+/* Remove the default HR line in favor of card spacing */
+hr {
+    display: none; 
+}
+
+/* Post Card Styling */
+.course-post {
+    max-width: 800px;
+    margin: 0 auto 24px auto;
+    background: #ffffff;
+    padding: 24px;
+    border-radius: 12px;
+    border: 1px solid #e2e8f0;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+    transition: transform 0.2s ease;
+}
+
+.course-post:hover {
+    border-color: #cbd5e1;
+}
+
+/* Post Metadata (Posted by, Type) */
+.course-post p {
+    margin: 0 0 8px 0;
+    font-size: 14px;
+    color: #64748b;
+}
+
+.course-post strong {
+    color: #475569;
+}
+
+/* Highlight Post Type badge */
+.course-post p:has(strong:contains("Type")) {
+    display: inline-block;
+    background: #f1f5f9;
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* Main Post Content */
+.post-content {
+    margin: 16px 0;
+    padding: 16px;
+    background: #fcfcfd;
+    border-left: 4px solid #3b82f6; /* Accent strip */
+    border-radius: 4px;
+    color: #1e293b;
+    font-size: 16px;
+    white-space: pre-wrap; /* Preserves line breaks from nl2br */
+}
+
+/* Date/Timestamp */
+.course-post small {
+    display: block;
+    margin-top: 12px;
+    color: #94a3b8;
+    font-size: 12px;
+    font-style: italic;
+}
+
+/* Empty State */
+p:only-of-type {
+    text-align: center;
+    color: #94a3b8;
+    margin-top: 50px;
+}

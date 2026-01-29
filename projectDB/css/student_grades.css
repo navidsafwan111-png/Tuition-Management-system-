@@ -1,0 +1,136 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+
+:root {
+    --primary: #3b82f6;
+    --bg-gray: #f8fafc;
+    --text-dark: #1e293b;
+    --text-muted: #64748b;
+    --white: #ffffff;
+    --border: #e2e8f0;
+}
+
+body {
+    background-color: var(--bg-gray);
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    padding: 40px 20px;
+}
+
+.grade-wrapper {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.grade-card {
+    background: var(--white);
+    border-radius: 16px;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+    padding: 32px;
+    border: 1px solid var(--border);
+}
+
+.grade-header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.grade-header h2 {
+    margin: 0;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--text-dark);
+}
+
+.course-badge {
+    display: inline-block;
+    margin-top: 10px;
+    background: #eff6ff;
+    color: var(--primary);
+    padding: 6px 16px;
+    border-radius: 999px;
+    font-size: 0.875rem;
+    font-weight: 600;
+}
+
+/* Stats Grid */
+.stats-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+    margin-bottom: 30px;
+}
+
+.stat-item {
+    background: var(--bg-gray);
+    padding: 16px;
+    border-radius: 12px;
+    text-align: center;
+    border: 1px solid var(--border);
+}
+
+.stat-item.total {
+    background: var(--primary);
+    border-color: var(--primary);
+    color: var(--white);
+}
+
+.stat-label {
+    display: block;
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    margin-bottom: 4px;
+    opacity: 0.9;
+}
+
+.stat-value {
+    font-size: 1.25rem;
+    font-weight: 700;
+}
+
+/* Table */
+.modern-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 30px;
+}
+
+.modern-table th {
+    text-align: left;
+    font-size: 0.875rem;
+    color: var(--text-muted);
+    padding-bottom: 12px;
+    border-bottom: 2px solid var(--bg-gray);
+}
+
+.modern-table td {
+    padding: 12px 0;
+    font-weight: 500;
+    border-bottom: 1px solid var(--bg-gray);
+}
+
+/* Footer & Button */
+.footer-nav {
+    text-align: center;
+    border-top: 1px solid var(--bg-gray);
+    padding-top: 20px;
+}
+
+.btn-back {
+    text-decoration: none;
+    color: var(--text-muted);
+    font-size: 0.875rem;
+    font-weight: 600;
+    transition: color 0.2s;
+}
+
+.btn-back:hover {
+    color: var(--primary);
+}
+
+.no-data {
+    text-align: center;
+    padding: 40px;
+    color: var(--text-muted);
+    font-style: italic;
+}

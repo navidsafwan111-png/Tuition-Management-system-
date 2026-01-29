@@ -1,0 +1,83 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: #333;
+}
+
+/* Container for the form */
+body > div, 
+form {
+    background: rgba(255, 255, 255, 0.95);
+    padding: 2.5rem;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    width: 100%;
+    max-width: 400px;
+}
+
+h2 {
+    margin-bottom: 2rem;
+    font-size: 1.8rem;
+    color: #4a4a4a;
+    font-weight: 600;
+}
+
+/* Flexbox to stack buttons */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+}
+
+/* Button Styling */
+button {
+    padding: 1rem;
+    font-size: 1.1rem;
+    font-weight: 500;
+    border: 2px solid transparent;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    background-color: #f8f9fa;
+    color: #555;
+    outline: none;
+}
+
+/* Student Button Specifics */
+button[value="student"] {
+    border-color: #667eea;
+}
+
+button[value="student"]:hover {
+    background-color: #667eea;
+    color: white;
+    transform: translateY(-2px);
+}
+
+/* Teacher Button Specifics */
+button[value="teacher"] {
+    border-color: #764ba2;
+}
+
+button[value="teacher"]:hover {
+    background-color: #764ba2;
+    color: white;
+    transform: translateY(-2px);
+}
+
+/* Active State */
+button:active {
+    transform: translateY(0);
+}

@@ -1,0 +1,158 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+:root {
+    --primary: #4f46e5;
+    --primary-hover: #4338ca;
+    --success: #10b981;
+    --bg: #f8fafc;
+    --white: #ffffff;
+    --text-main: #1e293b;
+    --text-muted: #64748b;
+    --border: #e2e8f0;
+}
+
+body {
+    background-color: var(--bg);
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    padding: 40px 20px;
+    color: var(--text-main);
+}
+
+.view-container {
+    max-width: 650px;
+    margin: 0 auto;
+}
+
+/* Header Styling */
+.view-header {
+    margin-bottom: 30px;
+}
+
+.back-link {
+    text-decoration: none;
+    color: var(--primary);
+    font-weight: 600;
+    font-size: 0.9rem;
+    display: inline-block;
+    margin-bottom: 10px;
+}
+
+.view-header h2 {
+    margin: 0;
+    font-size: 1.8rem;
+    font-weight: 800;
+}
+
+.course-badge {
+    margin-top: 8px;
+    display: inline-block;
+    background: #eef2ff;
+    color: var(--primary);
+    padding: 4px 12px;
+    border-radius: 6px;
+    font-weight: 600;
+    font-size: 0.85rem;
+}
+
+/* Card Styling */
+.view-card {
+    background: var(--white);
+    border-radius: 16px;
+    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05);
+    border: 1px solid var(--border);
+    overflow: hidden;
+}
+
+/* Top Info Grid */
+.info-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    border-bottom: 1px solid var(--border);
+    background-color: #fcfdfe;
+}
+
+.time-box {
+    padding: 20px;
+    text-align: center;
+}
+
+.time-box:first-child {
+    border-right: 1px solid var(--border);
+}
+
+.time-box .label {
+    display: block;
+    font-size: 0.7rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    margin-bottom: 5px;
+}
+
+.time-box .value {
+    font-size: 0.95rem;
+    font-weight: 600;
+}
+
+/* Action Sections */
+.action-block {
+    padding: 30px;
+    border-bottom: 1px solid var(--border);
+}
+
+.action-block:last-child { border-bottom: none; }
+
+.action-block.highlight {
+    background-color: #f0fdf4; /* Light success green */
+}
+
+.action-block h3 {
+    margin: 0 0 15px 0;
+    font-size: 1.1rem;
+    font-weight: 700;
+}
+
+.instruction {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    margin-bottom: 20px;
+}
+
+/* Buttons */
+.download-btn, .submit-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    text-decoration: none;
+    padding: 14px;
+    border-radius: 10px;
+    font-weight: 700;
+    transition: all 0.2s;
+}
+
+.download-btn {
+    background: var(--primary);
+    color: white;
+}
+
+.download-btn:hover { background: var(--primary-hover); }
+
+.submit-btn {
+    background: var(--success);
+    color: white;
+}
+
+.submit-btn:hover { background: #059669; }
+
+.empty-msg {
+    color: var(--text-muted);
+    font-style: italic;
+    font-size: 0.9rem;
+}
+
+@media (max-width: 500px) {
+    .info-section { grid-template-columns: 1fr; }
+    .time-box:first-child { border-right: none; border-bottom: 1px solid var(--border); }
+}

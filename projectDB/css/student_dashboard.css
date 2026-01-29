@@ -1,0 +1,142 @@
+/* Reset and Base Styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #f1f5f9;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #1e293b;
+    line-height: 1.6;
+}
+
+.dashboard-container {
+    max-width: 1100px;
+    margin: 50px auto;
+    padding: 0 20px;
+}
+
+/* Header Styling */
+.main-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+.welcome-block h1 {
+    font-size: 2rem;
+    font-weight: 800;
+    color: #0f172a;
+}
+
+.welcome-block p {
+    color: #64748b;
+    font-size: 1.1rem;
+}
+
+/* Button Styling */
+.enroll-btn {
+    background-color: #2563eb;
+    color: white;
+    text-decoration: none;
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-weight: 600;
+    transition: background 0.2s, transform 0.2s;
+    box-shadow: 0 4px 6px -1px rgba(37, 99, 235, 0.2);
+}
+
+.enroll-btn:hover {
+    background-color: #1d4ed8;
+    transform: translateY(-2px);
+}
+
+/* Status Messages */
+.status-msg {
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 25px;
+    font-weight: 500;
+    border-left: 5px solid transparent;
+}
+
+.success { background: #dcfce7; color: #166534; border-color: #22c55e; }
+.error { background: #fee2e2; color: #991b1b; border-color: #ef4444; }
+
+/* Grid and Cards */
+.course-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 25px;
+}
+
+.course-card {
+    background: white;
+    text-decoration: none;
+    color: inherit;
+    border-radius: 12px;
+    border: 1px solid #e2e8f0;
+    display: flex;
+    flex-direction: column;
+    transition: box-shadow 0.3s, border-color 0.3s;
+    overflow: hidden;
+}
+
+.course-card:hover {
+    border-color: #2563eb;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+}
+
+.card-content {
+    padding: 24px;
+    flex-grow: 1;
+}
+
+.category-tag {
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #2563eb;
+    margin-bottom: 8px;
+    display: block;
+}
+
+.course-card h3 {
+    margin-bottom: 8px;
+    font-size: 1.25rem;
+}
+
+.course-code {
+    color: #64748b;
+    font-size: 0.9rem;
+}
+
+.card-footer {
+    padding: 15px 24px;
+    background-color: #f8fafc;
+    border-top: 1px solid #e2e8f0;
+    font-weight: 600;
+    font-size: 0.85rem;
+    color: #2563eb;
+}
+
+/* Empty State */
+.empty-state {
+    grid-column: 1 / -1;
+    text-align: center;
+    padding: 50px;
+    background: white;
+    border-radius: 12px;
+    border: 2px dashed #cbd5e1;
+}
+
+@media (max-width: 600px) {
+    .main-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 20px;
+    }
+}

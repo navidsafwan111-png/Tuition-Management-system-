@@ -1,0 +1,149 @@
+/* Styling for Quiz Management List */
+
+:root {
+    --primary-color: #4834d4;
+    --hover-color: #686de0;
+    --bg-color: #f8fafd;
+    --text-main: #2d3436;
+    --text-muted: #636e72;
+    --white: #ffffff;
+    --shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    
+    /* Status Colors */
+    --status-upcoming: #f1c40f;
+    --status-running: #2ecc71;
+    --status-ended: #e74c3c;
+}
+
+body {
+    background-color: var(--bg-color);
+    font-family: 'Inter', -apple-system, sans-serif;
+    margin: 0;
+    padding: 40px 20px;
+    color: var(--text-main);
+    line-height: 1.6;
+}
+
+/* Container & Header */
+h2 {
+    font-size: 2rem;
+    color: var(--text-main);
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.back-link-container {
+    max-width: 1000px;
+    margin: 0 auto 20px auto;
+}
+
+a {
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+/* Action Buttons */
+.back-link {
+    color: var(--primary-color);
+    font-weight: 600;
+}
+
+.create-btn {
+    display: inline-block;
+    background-color: var(--primary-color);
+    color: white !important;
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-weight: 600;
+    margin: 20px 0;
+    box-shadow: 0 4px 12px rgba(72, 52, 212, 0.2);
+}
+
+.create-btn:hover {
+    background-color: var(--hover-color);
+    transform: translateY(-2px);
+}
+
+hr {
+    border: 0;
+    height: 1px;
+    background: #e0e0e0;
+    margin: 20px 0;
+    display: none; /* Hidden for a cleaner look */
+}
+
+/* Modern Table Styling */
+table {
+    width: 100%;
+    max-width: 1000px;
+    margin: 20px auto;
+    border-collapse: separate;
+    border-spacing: 0;
+    background: var(--white);
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+}
+
+thead {
+    background-color: #f1f3f9;
+}
+
+th {
+    text-align: left;
+    padding: 18px;
+    color: var(--text-muted);
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border-bottom: 2px solid #edf2f7;
+}
+
+td {
+    padding: 18px;
+    border-bottom: 1px solid #edf2f7;
+    font-size: 0.95rem;
+}
+
+tr:last-child td {
+    border-bottom: none;
+}
+
+tr:hover {
+    background-color: #fafbff;
+}
+
+/* Status Badges */
+.status-pill {
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 700;
+    display: inline-block;
+}
+
+.status-Upcoming { background: #fff9db; color: #f08c00; }
+.status-Running { background: #ebfbee; color: #2b8a3e; }
+.status-Ended { background: #fff5f5; color: #c92a2a; }
+
+/* View Button */
+.view-btn {
+    color: var(--primary-color);
+    font-weight: 700;
+    border: 1.5px solid var(--primary-color);
+    padding: 6px 15px;
+    border-radius: 6px;
+}
+
+.view-btn:hover {
+    background: var(--primary-color);
+    color: white !important;
+}
+
+/* Responsive Table */
+@media (max-width: 768px) {
+    table {
+        display: block;
+        overflow-x: auto;
+    }
+}
